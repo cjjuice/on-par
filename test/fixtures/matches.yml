@@ -1,15 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  date: 2012-10-21 20:48:06
-  accept: false
-  sup_bro: false
-  player: 
+  name: MyString
+  date: 2012-10-22 01:41:02
   venue: 
 
 two:
-  date: 2012-10-21 20:48:06
-  accept: false
-  sup_bro: false
-  player: 
+  name: MyString
+  date: 2012-10-22 01:41:02
   venue: 

@@ -11,19 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022004806) do
+ActiveRecord::Schema.define(:version => 20121022054105) do
 
-  create_table "matches", :force => true do |t|
-    t.datetime "date"
+  create_table "invites", :force => true do |t|
     t.boolean  "accept"
     t.boolean  "sup_bro"
     t.integer  "player_id"
+    t.integer  "match_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "invites", ["match_id"], :name => "index_invites_on_match_id"
+  add_index "invites", ["player_id"], :name => "index_invites_on_player_id"
+
+  create_table "matches", :force => true do |t|
+    t.string   "name"
+    t.datetime "date"
     t.integer  "venue_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "matches", ["player_id"], :name => "index_matches_on_player_id"
   add_index "matches", ["venue_id"], :name => "index_matches_on_venue_id"
 
   create_table "palendars", :force => true do |t|

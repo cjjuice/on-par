@@ -1,6 +1,6 @@
-desc "Insert fake data into the database"
-task :fake_data => :environment do
-  puts "Fake Data!"
+desc "Insert test data into the database"
+task :test_data => :environment do
+  puts "Test Data!"
 
   # Remove all model instances.
   Palendar.destroy_all
@@ -35,11 +35,20 @@ task :fake_data => :environment do
 
   # Create match objects.
   m1 = Match.create!(:date => Date.today,
-                     :accept => nil,
-                     :sup_bro => nil)
-  m1.player = p1
+                     :name => 'Battle Royale')
   m1.venue = v1
   m1.save
+
+  # Create invite objects.
+  inv1 = Invite.create!()
+  inv1.player = p1
+  inv1.match = m1
+  inv1.save
+
+  inv2 = Invite.create!()
+  inv2.player = p2
+  inv2.match = m1
+  inv2.save
 
   players = Player.all
 
