@@ -58,7 +58,12 @@ class PlayersController < ApplicationController
                                   'sup_bro' => invite.sup_bro,
                                   'created_at' => invite.created_at,
                                   'updated_at' => invite.updated_at,
-                                  'match' => invite.match})
+                                  'match' => {'id' => invite.match.id,
+                                              'date' => invite.match.date,
+                                              'name' => invite.match.name,
+                                              'created_at' => invite.match.created_at,
+                                              'updated_at' => invite.match.updated_at,
+                                              'venue' => invite.match.venue}})
       end
 
       output = {'info' => player,
