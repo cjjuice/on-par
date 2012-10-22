@@ -18,11 +18,10 @@ class PlayersController < ApplicationController
   
   def update
     id = params[:id]
+    player = Player.where(:id => id).first
 
-    # User id found. 
-    if id
-      player = Player.find(id)
-
+    # User found. 
+    if player != nil
       player.name = params[:name]
       player.email = params[:email]
       player.dob = params[:dob]
@@ -36,9 +35,29 @@ class PlayersController < ApplicationController
     
       render :json => {'id' => player.id}, :callback => params[:callback]                          
 
-    # User id NOT found. 
+    # User NOT found. 
     else
-      render :json => {'error' => 'Supplied user id invalid'}, callback => params[:callback]
+      render :json => {'error' => 'Supplied user id invalid'}, :callback => params[:callback]
+    end
+  end
+  
+  def show
+    id = params[:id]
+    player = Player.where(:id => id).first
+    output = Hash.new
+
+    # User id found. 
+    if player != nil
+
+      output = {'info' => player,
+                'calendars' => player.palendars,
+                'matches' => player.matches}
+
+      render :json => {'player' => output}, :callback => params[:callback]                          
+
+    # User NOT found. 
+    else
+      render :json => {'error' => 'Supplied user id invalid'}, :callback => params[:callback]
     end
   end
 end

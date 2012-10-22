@@ -3,6 +3,7 @@ Pickup::Application.routes.draw do
   match "calendars/delete" => 'calendars#delete'
   match 'players/create' => 'players#create'
   match 'players/update' => 'players#update'
+  match 'players/show' => 'players#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
