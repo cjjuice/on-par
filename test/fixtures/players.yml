@@ -3,8 +3,9 @@
 one:
   name: MyString
   email: MyString
-  dob: 2012-11-10 10:19:46
+  dob: 2012-10-21 20:48:03
   gender: MyString
+  facebook_id: MyString
   lat: 1.5
   lng: 1.5
   radius: 1
@@ -12,8 +13,9 @@ one:
 two:
   name: MyString
   email: MyString
-  dob: 2012-11-10 10:19:46
+  dob: 2012-10-21 20:48:03
   gender: MyString
+  facebook_id: MyString
   lat: 1.5
   lng: 1.5
   radius: 1

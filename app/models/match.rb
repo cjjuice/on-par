@@ -1,6 +1,5 @@
 class Match < ActiveRecord::Base
-  attr_accessible :accept, :date, :sup_bro
-
   belongs_to :player
   belongs_to :venue
+  attr_accessible :accept, :date, :sup_bro
 end

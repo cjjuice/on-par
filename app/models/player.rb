@@ -1,8 +1,5 @@
 class Player < ActiveRecord::Base
-  attr_accessible :dob, :email, :gender, :lat, :lng, :name, :radius
-  
-  has_many :matches 
-  has_many :venues, :through => :matches
-
-  has_many :calendars
+  has_many :palendars
+  has_many :matches
+  attr_accessible :dob, :email, :facebook_id, :gender, :lat, :lng, :name, :radius
 end

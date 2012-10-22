@@ -5,6 +5,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.string :email
       t.datetime :dob
       t.string :gender
+      t.string :facebook_id
       t.float :lat
       t.float :lng
       t.integer :radius

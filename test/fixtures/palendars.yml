@@ -4,8 +4,10 @@ one:
   day: 1
   start_time: 1
   end_time: 1
+  player: 
 
 two:
   day: 1
   start_time: 1
   end_time: 1
+  player: 

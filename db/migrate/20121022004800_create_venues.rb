@@ -4,7 +4,7 @@ class CreateVenues < ActiveRecord::Migration
       t.string :name
       t.float :lat
       t.float :lng
-      t.float :price
+      t.integer :price
       t.string :website
       t.string :pic_url
 
