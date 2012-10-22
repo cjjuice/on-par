@@ -49,9 +49,21 @@ class PlayersController < ApplicationController
     # User id found. 
     if player != nil
 
+      invites_and_matches = Array.new
+
+      # Create an array of invites and their related matches.
+      player.invites.each do |invite|
+        invites_and_matches.push({'id' => invite.id,
+                                  'accept' => invite.accept, 
+                                  'sup_bro' => invite.sup_bro,
+                                  'created_at' => invite.created_at,
+                                  'updated_at' => invite.updated_at,
+                                  'match' => invite.match})
+      end
+
       output = {'info' => player,
                 'calendars' => player.palendars,
-                'matches' => player.matches}
+                'invites' => invites_and_matches}
 
       render :json => {'player' => output}, :callback => params[:callback]                          
 
