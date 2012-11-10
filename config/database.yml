@@ -8,7 +8,7 @@ development:
   database: pickup_development
   pool: 5
   timeout: 5000
-  username: dan
+  username: cbordeleau
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -19,6 +19,6 @@ test:
   database: pickup_test
   pool: 5
   timeout: 5000
-  username: dan
+  username: cbordeleau
   password:
 

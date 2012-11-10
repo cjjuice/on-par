@@ -1,4 +1,6 @@
 Pickup::Application.routes.draw do
+  match "calendars/create" => 'calendars#create'
+  match "calendars/delete" => 'calendars#delete'
   match 'players/create' => 'players#create'
   match 'players/update' => 'players#update'
 
