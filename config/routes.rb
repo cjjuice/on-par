@@ -1,5 +1,5 @@
 Pickup::Application.routes.draw do
-  match 'players/add' => 'players#create'
+  match 'players/create' => 'players#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
