@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  dob: 2012-11-10 10:19:46
+  gender: MyString
+  lat: 1.5
+  lng: 1.5
+  radius: 1
+
+two:
+  name: MyString
+  email: MyString
+  dob: 2012-11-10 10:19:46
+  gender: MyString
+  lat: 1.5
+  lng: 1.5
+  radius: 1
