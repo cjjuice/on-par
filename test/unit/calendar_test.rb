@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ValendarTest < ActiveSupport::TestCase
+class CalendarTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

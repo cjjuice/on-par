@@ -67,7 +67,7 @@ class PlayersController < ApplicationController
       end
 
       output = {'info' => player,
-                'calendars' => player.palendars,
+                'calendars' => player.calendars,
                 'invites' => invites_and_matches}
 
       render :json => {'player' => output}, :callback => params[:callback]                          

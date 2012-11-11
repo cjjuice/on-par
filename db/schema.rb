@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121111163719) do
+ActiveRecord::Schema.define(:version => 20121111180259) do
+
+  create_table "calendars", :force => true do |t|
+    t.integer  "day"
+    t.integer  "start_time"
+    t.integer  "end_time"
+    t.integer  "calendarable_id"
+    t.string   "calendarable_type"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "invites", :force => true do |t|
     t.boolean  "accept"
@@ -37,17 +47,6 @@ ActiveRecord::Schema.define(:version => 20121111163719) do
   add_index "matches", ["sport_id"], :name => "index_matches_on_sport_id"
   add_index "matches", ["venue_id"], :name => "index_matches_on_venue_id"
 
-  create_table "palendars", :force => true do |t|
-    t.integer  "day"
-    t.integer  "start_time"
-    t.integer  "end_time"
-    t.integer  "player_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "palendars", ["player_id"], :name => "index_palendars_on_player_id"
-
   create_table "players", :force => true do |t|
     t.string   "name"
     t.string   "address"
@@ -68,17 +67,6 @@ ActiveRecord::Schema.define(:version => 20121111163719) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
-
-  create_table "valendars", :force => true do |t|
-    t.integer  "day"
-    t.integer  "start_time"
-    t.integer  "end_time"
-    t.integer  "venue_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "valendars", ["venue_id"], :name => "index_valendars_on_venue_id"
 
   create_table "venues", :force => true do |t|
     t.string   "name"

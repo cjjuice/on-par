@@ -3,8 +3,7 @@ task :test_data => :environment do
   puts "Test Data!"
 
   # Remove all model instances.
-  Palendar.destroy_all
-  Valendar.destroy_all
+  Calendar.destroy_all
   Match.destroy_all
   Venue.destroy_all
   Player.destroy_all
@@ -26,16 +25,16 @@ task :test_data => :environment do
                       :radius => 2)
 
   # Create player calendar objects.
-  c1 = Palendar.create!(:day => 3, 
+  c1 = Calendar.create!(:day => 3, 
                         :start_time => 10, 
                         :end_time => 12)
-  c1.player = p1
+  c1.calendarable = p1
   c1.save
 
-  c2 = Palendar.create!(:day => 6, 
+  c2 = Calendar.create!(:day => 6, 
                         :start_time => 8, 
                         :end_time => 17)
-  c2.player = p1
+  c2.calendarable = p1
   c2.save
 
   # Create venue objects.

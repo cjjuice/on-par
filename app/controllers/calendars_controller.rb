@@ -6,7 +6,7 @@ class CalendarsController < ApplicationController
     if id
       player = Player.find(id)
       
-      cal = Palendar.create
+      cal = Calendar.create
 
       cal.day = params[:day]
       cal.start_time = params[:start_time]
@@ -24,7 +24,7 @@ class CalendarsController < ApplicationController
 
   def delete
     id = params[:id]
-    cal = Palendar.where(:id => id).first
+    cal = Calendar.where(:id => id).first
     # User id found. 
     if cal != nil
       cal.destroy

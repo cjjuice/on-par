@@ -4,10 +4,12 @@ one:
   day: 1
   start_time: 1
   end_time: 1
-  player: 
+  calendarable_id: 1
+  calendarable_type: MyString
 
 two:
   day: 1
   start_time: 1
   end_time: 1
-  player: 
+  calendarable_id: 1
+  calendarable_type: MyString
