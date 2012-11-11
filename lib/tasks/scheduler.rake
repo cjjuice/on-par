@@ -10,9 +10,18 @@ task :test_data => :environment do
   Player.destroy_all
 
   # Create player objects.
-  p1 = Player.create!(:name => 'John')
-  p2 = Player.create!(:name => 'CJ')
-  p3 = Player.create!(:name => 'Kermit')
+  p1 = Player.create!(:name => 'John',
+                      :lat => 42.359178,
+                      :lng => -71.092113,
+                      :radius => 5)
+  p2 = Player.create!(:name => 'CJ',
+                      :lat => 42.358607,
+                      :lng => -71.07014,
+                      :radius => 3)
+  p3 = Player.create!(:name => 'Kermit',
+                      :lat => 42.320986,
+                      :lng => -71.172107,
+                      :radius => 2)
 
   # Create player calendar objects.
   c1 = Palendar.create!(:day => 3, 
