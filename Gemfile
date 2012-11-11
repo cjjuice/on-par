@@ -9,6 +9,8 @@ gem 'rails-api'
 
 gem 'pg'
 
+gem 'geocoder'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
