@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  date: 2012-11-11 11:28:22
-  venue: 
+  num_of_players: 1
 
 two:
   name: MyString
-  date: 2012-11-11 11:28:22
-  venue: 
+  num_of_players: 1

@@ -8,6 +8,8 @@ task :test_data => :environment do
   Match.destroy_all
   Venue.destroy_all
   Player.destroy_all
+  Sport.destroy_all
+  Invite.destroy_all
 
   # Create player objects.
   p1 = Player.create!(:name => 'John',
@@ -42,10 +44,15 @@ task :test_data => :environment do
                      :lng => -71.081041,
                      :price => 0)
 
+  # Create a sport.
+  s = Sport.create!(:name => 'Golf',
+                    :num_of_players => 4)
+
   # Create match objects.
   m1 = Match.create!(:date => Date.today,
                      :name => 'Battle Royale')
   m1.venue = v1
+  m1.sport = s
   m1.save
 
   # Create invite objects.
