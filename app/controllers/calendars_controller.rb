@@ -18,7 +18,7 @@ class CalendarsController < ApplicationController
 
     # User id NOT found. 
     else
-      render :json => {'error' => 'Supplied user id invalid'}, callback => params[:callback]
+      render :json => {'error' => 'Supplied user id invalid'}, :callback => params[:callback]
     end
   end
 
