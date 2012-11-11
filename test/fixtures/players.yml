@@ -2,8 +2,9 @@
 
 one:
   name: MyString
+  address: MyString
   email: MyString
-  dob: 2012-10-22 01:40:59
+  dob: 2012-11-10 21:57:51
   gender: MyString
   facebook_id: MyString
   lat: 1.5
@@ -12,8 +13,9 @@ one:
 
 two:
   name: MyString
+  address: MyString
   email: MyString
-  dob: 2012-10-22 01:40:59
+  dob: 2012-11-10 21:57:51
   gender: MyString
   facebook_id: MyString
   lat: 1.5
